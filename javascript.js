@@ -28,7 +28,7 @@ function playGround(playerSelection,computerSelection){
     }
 
     // player wins
-    else if (playerSelection=="rock" && computerSelection =="scissors"||(playerSelection=="scissors" && computerSelection=="paper")||(playerSelection=="paper" && computerSelection=="rock")){ 
+    else if ((playerSelection=="rock" && computerSelection =="scissors")||(playerSelection=="scissors" && computerSelection=="paper")||(playerSelection=="paper" && computerSelection=="rock")){ 
          console.log("you won this round!")
          playerWin++
     }
