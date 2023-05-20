@@ -4,10 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS-Fundamentals</title>
+    <title>Rock-Paper-Scissors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
   </head>
 
   <body>
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold text-center mb-6">Rock Paper Scissors</h1>
+
+      <div class="text-center mb-4">
+        <button
+          id="rock-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
+        >
+          Rock
+        </button>
+        <button
+          id="paper-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
+        >
+          Paper
+        </button>
+        <button
+          id="scissors-button"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2 rounded"
+        >
+          Scissors
+        </button>
+        <button
+          id="reset-button"
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div class="text-center mb-4">
+        <h2 class="text-lg font-bold">
+          Player Choice: <span id="player-choice"></span>
+        </h2>
+        <h2 class="text-lg font-bold">
+          Computer Choice: <span id="computer-choice"></span>
+        </h2>
+      </div>
+
+      <h2 id="result" class="text-lg font-bold text-center mb-6"></h2>
+
+      <div class="text-center">
+        <h2 class="text-lg font-bold mb-2">Game History:</h2>
+        <div id="history-container" class="max-h-48 overflow-y-auto">
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    
+    
     <script src="javascript.js"></script>
   </body>
 </html>
